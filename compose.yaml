@@ -27,6 +27,8 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: 1234567
       SPRING_FLYWAY_ENABLED: "false"
+    volumes:
+      - ./OqygaBackend/uploads:/app/uploads
 
 volumes:
   db_data: # Том для хранения данных базы
