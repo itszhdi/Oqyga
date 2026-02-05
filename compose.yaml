@@ -13,7 +13,18 @@ services:
       - db_data:/var/lib/postgresql/data # Тут данные сохранятся, если удалить контейнер
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
- 
+  wa-bot:
+      build: ./wa-bot-service # Путь к папке с ботом
+      container_name: wa_bot
+      restart: always
+      ports:
+        - "3000:3000"
+      volumes:
+        # Сохраняем сессию WhatsApp, чтобы не сканировать QR каждый раз
+        - ./wa-bot-service/.wwebjs_auth:/app/.wwebjs_auth
+      environment:
+        - NODE_ENV=production
+
   backend:
     build: ./OqygaBackend 
     container_name: oqyga_backend
@@ -22,13 +33,18 @@ services:
       - "8080:8080" # localhost:8080
     depends_on:
       - db
+      - wa-bot
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/Oqyga
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: 1234567
       SPRING_FLYWAY_ENABLED: "false"
+      BOT_API_URL: http://wa-bot:3000/api/send-otp
+      
     volumes:
       - ./OqygaBackend/uploads:/app/uploads
+
+    
 
 volumes:
   db_data: # Том для хранения данных базы
