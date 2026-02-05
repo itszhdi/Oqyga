@@ -16,7 +16,7 @@ const PORT = 3000;
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        headless: false,
+        headless: true,
         executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined, 
         args: [
             '--no-sandbox',
