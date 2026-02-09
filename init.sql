@@ -5,7 +5,7 @@
 -- Dumped from database version 16.4
 -- Dumped by pg_dump version 16.4
 
--- Started on 2026-02-05 21:10:21
+-- Started on 2026-02-09 15:21:01
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -52,7 +52,7 @@ CREATE SEQUENCE public.age_restrictions_age_id_seq
 ALTER SEQUENCE public.age_restrictions_age_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4962 (class 0 OID 0)
+-- TOC entry 4963 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: age_restrictions_age_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -94,7 +94,7 @@ CREATE SEQUENCE public.cards_token_id_seq
 ALTER SEQUENCE public.cards_token_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4963 (class 0 OID 0)
+-- TOC entry 4964 (class 0 OID 0)
 -- Dependencies: 232
 -- Name: cards_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -134,7 +134,7 @@ CREATE SEQUENCE public.categories_category_id_seq
 ALTER SEQUENCE public.categories_category_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4964 (class 0 OID 0)
+-- TOC entry 4965 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: categories_category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -174,7 +174,7 @@ CREATE SEQUENCE public.cities_city_id_seq
 ALTER SEQUENCE public.cities_city_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4965 (class 0 OID 0)
+-- TOC entry 4966 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: cities_city_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -228,7 +228,7 @@ CREATE SEQUENCE public.events_event_id_seq
 ALTER SEQUENCE public.events_event_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4966 (class 0 OID 0)
+-- TOC entry 4967 (class 0 OID 0)
 -- Dependencies: 228
 -- Name: events_event_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -287,7 +287,7 @@ CREATE SEQUENCE public.organisators_organisator_id_seq
 ALTER SEQUENCE public.organisators_organisator_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4967 (class 0 OID 0)
+-- TOC entry 4968 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: organisators_organisator_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -326,7 +326,7 @@ CREATE SEQUENCE public.promocodes_promocode_id_seq
 ALTER SEQUENCE public.promocodes_promocode_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4968 (class 0 OID 0)
+-- TOC entry 4969 (class 0 OID 0)
 -- Dependencies: 226
 -- Name: promocodes_promocode_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -368,7 +368,7 @@ CREATE SEQUENCE public.tickets_ticket_id_seq
 ALTER SEQUENCE public.tickets_ticket_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4969 (class 0 OID 0)
+-- TOC entry 4970 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: tickets_ticket_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -394,7 +394,8 @@ CREATE TABLE public.users (
     otp_expiry_date timestamp without time zone,
     password_reset_token character varying(250),
     password_reset_token_expiry_date timestamp without time zone,
-    stripe_customer_id character varying(255)
+    stripe_customer_id character varying(255),
+    is_blocked boolean DEFAULT false NOT NULL
 );
 
 
@@ -417,7 +418,7 @@ CREATE SEQUENCE public.users_user_id_seq
 ALTER SEQUENCE public.users_user_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4970 (class 0 OID 0)
+-- TOC entry 4971 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: users_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -426,7 +427,7 @@ ALTER SEQUENCE public.users_user_id_seq OWNED BY public.users.user_id;
 
 
 --
--- TOC entry 4735 (class 2604 OID 59668)
+-- TOC entry 4736 (class 2604 OID 59668)
 -- Name: age_restrictions age_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -434,7 +435,7 @@ ALTER TABLE ONLY public.age_restrictions ALTER COLUMN age_id SET DEFAULT nextval
 
 
 --
--- TOC entry 4742 (class 2604 OID 59767)
+-- TOC entry 4743 (class 2604 OID 59767)
 -- Name: cards token_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -442,7 +443,7 @@ ALTER TABLE ONLY public.cards ALTER COLUMN token_id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 4736 (class 2604 OID 59677)
+-- TOC entry 4737 (class 2604 OID 59677)
 -- Name: categories category_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -450,7 +451,7 @@ ALTER TABLE ONLY public.categories ALTER COLUMN category_id SET DEFAULT nextval(
 
 
 --
--- TOC entry 4737 (class 2604 OID 59686)
+-- TOC entry 4738 (class 2604 OID 59686)
 -- Name: cities city_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -458,7 +459,7 @@ ALTER TABLE ONLY public.cities ALTER COLUMN city_id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 4739 (class 2604 OID 59704)
+-- TOC entry 4740 (class 2604 OID 59704)
 -- Name: events event_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -466,7 +467,7 @@ ALTER TABLE ONLY public.events ALTER COLUMN event_id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 4734 (class 2604 OID 59654)
+-- TOC entry 4735 (class 2604 OID 59654)
 -- Name: organisators organisator_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -474,7 +475,7 @@ ALTER TABLE ONLY public.organisators ALTER COLUMN organisator_id SET DEFAULT nex
 
 
 --
--- TOC entry 4738 (class 2604 OID 59695)
+-- TOC entry 4739 (class 2604 OID 59695)
 -- Name: promocodes promocode_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -482,7 +483,7 @@ ALTER TABLE ONLY public.promocodes ALTER COLUMN promocode_id SET DEFAULT nextval
 
 
 --
--- TOC entry 4740 (class 2604 OID 59737)
+-- TOC entry 4741 (class 2604 OID 59737)
 -- Name: tickets ticket_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -498,7 +499,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 
 
 --
--- TOC entry 4944 (class 0 OID 59665)
+-- TOC entry 4945 (class 0 OID 59665)
 -- Dependencies: 221
 -- Data for Name: age_restrictions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -515,20 +516,18 @@ COPY public.age_restrictions (age_id, age_category) FROM stdin;
 
 
 --
--- TOC entry 4956 (class 0 OID 59764)
+-- TOC entry 4957 (class 0 OID 59764)
 -- Dependencies: 233
 -- Data for Name: cards; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.cards (token_id, payment_token, last_four_digits, user_id, brand, fingerprint) FROM stdin;
-3	Y9cz/VbBZazqD92sn81E2Z0n3OIV3/jf0q0PUo4K7rE=	4444	32	mastercard	90babf275e94772f728c6fd7e7a3f00cf57c726d4f8c3f7e93f4c8352af30aec
-4	PkUp4gEOIkJjlSz1KUKOct50U/CZDSBONip1EcLg3Wk=	4242	32	visa	428e76a7c46e4aa6b14da2b52eb5fd695bdab40565fecff10fa9614d67af142e
 6	/GU15tTND7fT0ur0W/BNu7aIOEEWX7mMBLRNMQfX8Y0=	3222	30	mastercard	d4317d9c02cd7f5d5e4bd7af9ac2f78ae325dd25516410cc317df4f165b99f9e
 \.
 
 
 --
--- TOC entry 4946 (class 0 OID 59674)
+-- TOC entry 4947 (class 0 OID 59674)
 -- Dependencies: 223
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -548,7 +547,7 @@ COPY public.categories (category_id, category_name, category_name_en, category_n
 
 
 --
--- TOC entry 4948 (class 0 OID 59683)
+-- TOC entry 4949 (class 0 OID 59683)
 -- Dependencies: 225
 -- Data for Name: cities; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -572,7 +571,7 @@ COPY public.cities (city_id, city_name, city_name_en, city_name_kk) FROM stdin;
 
 
 --
--- TOC entry 4952 (class 0 OID 59701)
+-- TOC entry 4953 (class 0 OID 59701)
 -- Dependencies: 229
 -- Data for Name: events; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -604,7 +603,6 @@ COPY public.events (event_id, event_name, event_date, event_place, event_time, d
 57	Polina Hanym в Алматы	2025-11-23	Джаз клуб Everjazz, ул. Гоголя, 40б	18:00:00	23 ноября мы перенесём вас в солнечный Рио-де-Жанейро прямо в сердце Алматы. Polina Hanym исполнит лучшие композиции в жанре джаз, погружая слушателей в атмосферу бразильской босса-новы и латиноамериканских ритмов.	static/eventPhoto/polina_hanym.jpg	200	2	3	2	25	Polina Hanym in Almaty	Polına Hanym Almatyda	Everjazz Jazz Club, Gogol St, 40b	Everjazz Jaz Klýby, Gogol Kóshesi, 40b	On November 23, we will transport you to sunny Rio de Janeiro right in the heart of Almaty. Polina Hanym will perform the best compositions in the jazz genre, immersing listeners in the atmosphere of Brazilian bossa nova and Latin American rhythms.	23 qarashada biz sizdi Almatynyń qaq ortasynda kún shýaqty Rıo-de-Janeıroǵa aparamyz. Polina Hanym tyńdaýshylardy Brazılıalyq bastyq nova men latyn amerıkasymovaǵynyń atmosferasyna batyra otyryp, jaz janryndaǵy eń jaqsy shyǵarmalardy oryndaıdy.
 58	Алсу в Алматы	2025-11-02	Дворец Республики	20:00:00	Долгожданный концерт Алсу в Казахстане! Певица приглашает вас на незабываемый вечер музыки, наполненный теплотой, искренностью и атмосферой волшебства. Не упустите шанс услышать любимые хиты «Зимний сон», «Иногда» и новые песни в живом исполнении.	static/eventPhoto/alsu.jpg	3000	2	3	2	25	Alsou in Almaty	Almatıdaǵy Alsy	Palace of the Republic	Respýblıka saraıy	Long-awaited concert of Alsou in Kazakhstan! The singer invites you to an unforgettable evening of music filled with warmth, sincerity, and an atmosphere of magic. Do not miss the chance to hear beloved hits "Winter Dream", "Sometimes" and new songs performed live.	Qazaqstanda kópten kútken Alsý konserti! Ánshi Sizdi jylýlyqqa, shynaıylyqqa jáne sıqyrly atmosferaǵa toly umytylmas mýzyka keshine shaqyrady. "Qysqy uıqy", "keıde" súıikti hıtterin jáne tiri oryndaýdaǵy jańa ánderdi tyńdaý múmkindigin jiberip almańyz.
 89	MEGADETH	2026-06-28	СТАДИОН СПАРТАК (Центральный парк), адрес: ул Гоголя, д1, стр 10	17:00:00	MEGADETH это рубеж, после которого метал уже никогда не будет прежним.\n\nПочти невозможно представить, куда бы пришла тяжёлая музыка и культура без группы, основанной, возглавляемой и движимой вокалистом, гитаристом, автором песен и продюсером Дэйвом Мастейном.\n\nС 1983 года MEGADETH остаются одной из самых значимых и влиятельных сил в метале. На их счету 50 миллионов проданных пластинок, премия Grammy и 12 номинаций, миллиарды стримов, семь альбомов в десятке лучших Billboard 200 и армии фанатов по всему миру. Их присутствие ощущается везде от татуировок на знаменитостях до появления в культовых фильмах, сериалах и поп-культуре на протяжении десятилетий.\n\nВ 2025 году коллектив выпустил сингл к новому 17-ому студийному альбому MEGADETH и звучит живее, яростнее и технически сильнее, чем когда-либо. Это скоростной, хлёсткий и филигранно исполненный метал с фирменными риффами, безумными соло, резкими ритмами и острыми текстами, сочетающими ярость и философские размышления.\n\nВ состав группы входят Дэйв Мастейн, Теэму Мянтюсаари (гитара), Джеймс Ломенцо (бас) и Дирк Вербёрен (ударные).\n\nMEGADETH продолжает бросать вызов жанру и расширять его границы, создавая безупречно точный, сложный и цепляющий трэш.\n\nНе пропустите впервые в Казахстане мощный концерт MEGADETH на стадионе Спартак 28 июня 2026!	/uploads/event_posters/b45324fa-759b-4e99-b7fa-564f4b9255ff.jpg	2400	1	3	2	21	MEGADETH	MEGADETH	Spartak Stadium (Central Park), Gogol St 1, bld 10	"Spartak" Stadıony (Ortalyq Saıabaq), Gogol Kóshesi, 1, bld, 10	MEGADETH is a milestone after which metal will never be the same. Since 1983, MEGADETH has remained one of the most significant and influential forces in metal. They have 50 million records sold, a Grammy Award and 12 nominations. In 2025, the band released a single for the new 17th studio album. The lineup includes Dave Mustaine, Teemu Mantysaari, James LoMenzo, and Dirk Verbeuren. Don't miss the powerful MEGADETH concert for the first time in Kazakhstan on June 28, 2026!	MEGADET bul shekara, sodan keıin metal eshqashan birdeı bolmaıdy.\n\nVokalıst, gıtarıst, án jazýshy jáne prodúser Deıv Mýsteın negizin qalaǵan, basqaratyn jáne basqaratyn topsyz aýyr mýzyka men mádenıettiń qaıda keletinin elestetý múmkin emes.\n\n1983 jyldan bastap MEGADET metaldaǵy eń mańyzdy jáne yqpaldy kúshterdiń biri bolyp qala berdi. Olardyń esebinde satylǵan 50 mıllıon jazbalar, Grammy syılyǵy jáne 12 nomınasıa, mıllıardtaǵan aǵyndar, Billboard 200 úzdik ondyǵyndaǵy jeti álbom jáne búkil álem boıynsha jankúıerler armıasy bar. Olardyń qatysýy ataqty tatýırovkadan bastap, ondaǵan jyldar boıy kúlttik fılmderde, telehıkaıalarda jáne pop-mádenıette paıda bolǵanǵa deıin barlyq jerde seziledi.\n\n2025 jyly ujym jańa 17-shi Megadeth stýdıalyq álbomyna sıngl shyǵardy jáne burynǵydan da jandy, ashýly jáne tehnıkalyq jaǵynan kúshti estiledi. Bul qoltańba rıfteri, essiz jeke ánder, ótkir rıtaqtar jáne ashýlanshaqtyq pen fılosofıalyq refleksıany biriktiretin ótkir mátinderi bar jyldam, qyńyr jáne fılıgranalyq oryndalǵan metal.\n\nToptyń quramyna Deıv Mýsteın, Teamý Mantýsaarı (gıtara), Djeıms lo lo (bas) jáne Dırk Verberen (barabandar) kiredi.\n\nMEGADETH janrǵa qarsy turýdy jáne onyń shekaralaryn keńeıtýdi jalǵastyrady, minsiz dál, kúrdeli jáne tartymdy tresh jasaıdy.\n\nQazaqstanda alǵash ret Spartak stadıonyndaǵy Megadeth qýatty konsertin jiberip almańyz 28 maýsym 2026!
-71	Лекция-экскурсия по выставке «Урал Тансыкбаев»	2025-10-18	Галерея изобразительного искусства (NBU)	14:00:00	Ведущий Данияр Холматов, энтузиаст искусства, магистрант факультета арт-менеджмента Российского гуманитарного университета познакомит вам с ключевыми этапами биографии художника, разбор его значимых работ, обсуждение самой экспозиции и её контекста.	static/eventPhoto/урал_тансыкбаев.jpg	8	2	7	10	24	Lecture-tour of "Ural Tansykbayev" exhibition	"Oral Tańsyqbaev" kórmesiniń dáris-týry	Gallery of Fine Arts (NBU)	Beıneleý óneri galereıasy (NBU)	Host Daniyar Kholmatov, an art enthusiast and master's student at the Art Management Faculty of the Russian University for the Humanities, will introduce you to key stages of the artist's biography, analyze his significant works, and discuss the exposition itself and its context.	Sýretshi Oral Tańsyqbaevtyń kórmesi boıynsha leksııa-eks kýrsııa. Árt-menedjment mamany Danııar Holmatov sýretshiniń ómirbaıany men shyǵarmashylyǵymen tanystyrady.
 72	Almaty Open ATP 250	2025-10-16	«Almaty Arena»	11:00:00	Это целая неделя ярких эмоций: фан-зоны, интерактивы, семейные активности, живая музыка и фудкорты с кухнями со всего мира - каждый день на территории Almaty Arena.\n\nПомимо турнира, гостей ждут концерты топ-артистов. На церемонии открытия выступит Димаш Кудайберген, а каждый вечер на сцене будут Ninety One, Alem, M’dee, Кайрат Нуртас, Мирас Жугунусов и ILHAN.\n\nИстория турнира началась в 2020 году в Астане - тогда он прошёл как турнир категории ATP 250. В 2022 году уровень соревнования был единожды повышен до ATP 500 и собрал звёзд мировой десятки: Новак Джокович, Стефанос Циципас, Даниил Медведев, Карлос Алькарас, Хуберт Хуркач, Андрей Рублёв и других.\n\nА прошлогодний чемпион Карен Хачанов возвращается в Алматы, чтобы вновь защитить свой титул!	static/eventPhoto/almaty_open.png	1500	5	5	2	5	Almaty Open ATP 250	Almaty Ashyq ATP 250	Almaty Arena	Almaty Arena	It's a whole week of vivid emotions: fan zones, interactive events, family activities, live music and food courts with cuisines from all over the world - every day on the territory of Almaty Arena.\n\nIn addition to the tournament, the guests will enjoy concerts by top artists. Dimash Kudaibergen will perform at the opening ceremony, and every evening Ninety One, Alem, M'dee, Kairat Nurtas, Miras Zhugunusov and ILHAN will be on stage.\n\nThe history of the tournament began in 2020 in Astana, when it was held as an ATP 250 tournament. In 2022, the competition level was upgraded once to the ATP 500 and brought together world top ten stars: Novak Djokovic, Stefanos Tsitsipas, Daniil Medvedev, Carlos Alcaraz, Hubert Hurkach, Andrey Rublev and others.\n\nAnd last year's champion Karen Khachanov is returning to Almaty to defend his title again!	Bul jarqyn emosıalar aptalyǵy: fan-aımaqtar, ınteraktıvter, otbasylyq is - sharalar, jandy mýzyka jáne álemniń túkpir-túkpirinen kelgen ashanalary bar fýdkorttar-kún saıyn Almaty Arena aýmaǵynda.\n\nTýrnırden basqa, qonaqtardy top-ártisterdiń konsertteri kútedi. Ashylý saltanatynda Dımash Qudaıbergen óner kórsetedi, al ár kesh saıyn sahnada Ninety One, Alem, M ' dee, Qaırat Nurtas, Mıras Jýgýnýsov jáne ILHAN bolady.\n\nTýrnırdiń tarıhy 2020 jyly Astanada bastaldy-sodan keıin ol ATP 250 sanatyndaǵy týrnır retinde ótti. 2022 jyly jarys deńgeıi bir ret ATP 500 deńgeıine kóterilip, álemdik ondyqtyń juldyzdaryn jınady: Novak Djokovıch, Stefanos Sısıpas, Danııl Medvedev, Karlos Alkaras, Hýbert Hýrkach, Andreı Rýblev jáne basqalar.\n\nAl byltyrǵy chempıon Karen Hachanov óz ataǵyn qaıtadan qorǵaý úshin Almatyǵa oralady!
 68	Lucia Lacarra: суперзвезда мирового балета	2025-11-05	Almaty Theatre	19:30:00	1 и 2 ноября Международный фестиваль танца Ballet совместно с Алматы Театром представляет событие, которого с нетерпением ждёт культурная столица Казахстана. Впервые в Алматы выступит испанская суперзвезда Люсия Лакарра обладательница «Оскара балета» Benois de la Danse, премии Нежинского и звания «Танцовщица десятилетия».	static/eventPhoto/lucia_lacarra.jpg	800	4	3	2	7	Lucia Lacarra: World Ballet Superstar	Lúsıa Lakarra: Álemdik Balet Sýperjuldyzy	Almaty Theatre	Almaty teatry	On November 1 and 2, the International Ballet Festival together with Almaty Theatre presents an event eagerly awaited by the cultural capital of Kazakhstan. For the first time in Almaty, Spanish superstar Lucia Lacarra, winner of the "Ballet Oscar" Benois de la Danse, the Nijinsky Award, and the title of "Dancer of the Decade", will perform.	Alǵash ret Almatyda — ıspanııalyq balet juldyzy, «Onjyldyq bılshisi» ataǵynyń ıegeri Lúsııa Lakarra óner kórsetedi.
 90	Лучшее от Tarsi	2026-03-08	Дворец Жастар	19:00:00	Tarsi Orchestra - Дважды Победители в номинации «Лучший симфонический концерт года» по версии Ticketon\n\nГрандиозный симфо-концерт «Лучшее от Tarsi»\n\nХиты, проверенные временем, энергия, от которой мурашки. Ностальгия ретро-хитов и драйвовая мощь рок-композиций в симфонической обработке.\n\nЛучшие композиции культовых исполнителей, таких как: «Europe», «Queen», «Cher», «Status Quo», «Наутилиус Помпилиус», «Би2», «КиШ» и мн.др. Это будет концерт, где музыка не просто звучит - она зажигает, вдохновляет и объединяет!\n\nГости вечера: рекордсмены по количеству гастролей, алматинская трибьют группа " PULSE KINO "!\nНовый солист группы Рустем Нурдильдин исполнит для Вас лучшие хиты Виктора Цоя в сопровождении симфонического оркестра Tarsi!\n\nСолистка нашего вечера - лауреат международных конкурсов Айнур Енбекова и главный дирижёр Мәдениет саласының үздігі Ерлан Бейсембаев!\n\nПогрузитесь в магию музыки вместе с Tarsi Orchestra - это будет вечер, который останется в памяти надолго!	/uploads/event_posters/f5585241-a825-498f-a3af-677d77f5f050.jpg	127	1	3	1	21	The Best of Tarsi	Tarsi-den eń úıdikter	Zhastar Palace	Jastar saraıy	Tarsi Orchestra - Twice Winners in the nomination "Best Symphonic Concert of the Year" by Ticketon. Grand symphonic concert "The Best of Tarsi". Hits tested by time, energy that gives goosebumps. Nostalgia of retro hits and driving power of rock compositions in symphonic processing. Best compositions of cult performers like: Europe, Queen, Cher, Status Quo, Nautilus Pompilius, Bi-2, KiSh and many others. Guests of the evening: Almaty tribute band "PULSE KINO"!	Tarsi sımfonııalyq orkestriniń úzdik konserti. Baǵdarlamada tanymal rok jáne retro-hıtter, sondaı-aq «PULSE KINO» tobynyń oryndaýyndaǵy Vıktor Coıdyń ánderi bar.
@@ -624,7 +622,7 @@ COPY public.events (event_id, event_name, event_date, event_place, event_time, d
 
 
 --
--- TOC entry 4938 (class 0 OID 59628)
+-- TOC entry 4939 (class 0 OID 59628)
 -- Dependencies: 215
 -- Data for Name: flyway_schema_history; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -648,11 +646,12 @@ COPY public.flyway_schema_history (installed_rank, version, description, type, s
 16	16	add card column	SQL	V16__add_card_column.sql	-677607959	postgres	2026-01-28 14:28:12.279642	18	t
 17	17	add cardbrand column	SQL	V17__add_cardbrand_column.sql	1759400501	postgres	2026-01-30 13:59:26.91293	21	t
 18	18	add cardfingerprint column	SQL	V18__add_cardfingerprint_column.sql	-1143971765	postgres	2026-02-01 16:47:41.470356	12	t
+19	19	add isBlocked column	SQL	V19__add_isBlocked_column.sql	-1528495	postgres	2026-02-09 14:00:45.193627	40	t
 \.
 
 
 --
--- TOC entry 4942 (class 0 OID 59651)
+-- TOC entry 4943 (class 0 OID 59651)
 -- Dependencies: 219
 -- Data for Name: organisators; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -690,7 +689,7 @@ COPY public.organisators (organisator_id, user_id) FROM stdin;
 
 
 --
--- TOC entry 4950 (class 0 OID 59692)
+-- TOC entry 4951 (class 0 OID 59692)
 -- Dependencies: 227
 -- Data for Name: promocodes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -698,13 +697,13 @@ COPY public.organisators (organisator_id, user_id) FROM stdin;
 COPY public.promocodes (promocode_id, promocode, price_charge) FROM stdin;
 1	Oqyshy5	0.05
 2	Alash10	0.1
-3	AtaAnalar15	0.15
-4	PepsiCola3	0.03
+4	PepsiCola3	0.029999999329447746
+3	AtaAnalar15	0.15000000596046448
 \.
 
 
 --
--- TOC entry 4954 (class 0 OID 59734)
+-- TOC entry 4955 (class 0 OID 59734)
 -- Dependencies: 231
 -- Data for Name: tickets; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -718,9 +717,6 @@ COPY public.tickets (ticket_id, price, user_id, event_id, quantity, seat_details
 45	9000	\N	44	200	Эконом
 178	120000	30	89	2	Ряд 3, Место 10; Ряд 3, Место 11
 185	24000	30	90	3	Ряд 5, Место 8; Ряд 5, Место 9; Ряд 5, Место 10
-186	17010	32	69	1	Ряд 2, Место 3
-187	44814	32	70	3	Ряд 1, Место 1; Ряд 1, Место 2; Ряд 1, Место 3
-199	18000	32	91	1	Ряд 5, Место 3
 200	3000	\N	90	30	Зал
 201	8000	\N	90	97	Сцена
 203	32000	\N	91	30	VIP
@@ -762,7 +758,6 @@ COPY public.tickets (ticket_id, price, user_id, event_id, quantity, seat_details
 67	3800	\N	66	150	Эконом
 69	4950	\N	68	100	Стандарт
 70	6500	\N	69	100	Стандарт
-72	5000	\N	71	100	Стандарт
 73	6870.99	\N	72	80	Комфорт
 74	9580.99	\N	73	60	Premium
 75	2500	\N	74	300	Входной
@@ -793,7 +788,6 @@ COPY public.tickets (ticket_id, price, user_id, event_id, quantity, seat_details
 107	9900	\N	67	60	Premium
 108	9550	\N	68	60	Premium
 109	12000	\N	69	50	VIP
-111	2990	\N	71	250	Входной
 112	3450	\N	72	150	Эконом
 113	4500	\N	73	150	Эконом
 114	8950	\N	74	100	Стандарт
@@ -829,7 +823,6 @@ COPY public.tickets (ticket_id, price, user_id, event_id, quantity, seat_details
 145	6850	\N	66	100	Стандарт
 146	5500	\N	67	100	Стандарт
 147	12400	\N	68	50	VIP
-150	7600	\N	71	100	Стандарт
 151	9000	\N	72	60	Premium
 152	13400	\N	73	50	VIP
 153	5990	\N	74	100	Стандарт
@@ -838,54 +831,53 @@ COPY public.tickets (ticket_id, price, user_id, event_id, quantity, seat_details
 156	15490	\N	77	50	VIP
 157	8500	\N	78	100	Стандарт
 180	15400	\N	70	47	VIP
-202	35890	32	88	1	Ряд 4, Место 7
 169	37000	\N	88	1999	Стандартный вход
 \.
 
 
 --
--- TOC entry 4940 (class 0 OID 59638)
+-- TOC entry 4941 (class 0 OID 59638)
 -- Dependencies: 217
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.users (user_id, user_name, password, phone_number, email, user_photo, role, otp, refresh_token, otp_expiry_date, password_reset_token, password_reset_token_expiry_date, stripe_customer_id) FROM stdin;
-2	Kazakh Concert Prod.	$2a$10$EDJorePW9wFtGRUiZunugOSY5aohl9l3cxY9Th45AJCZFEYiP59zS	+77019876543	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-3	Good Event Management	$2a$10$wkj6rvuPCetay4h8.FC9Su71M4hZj/.EYjkt8FJioUzubFtBZA/6m	+77080123456	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-4	Astana Concert Agency	$2a$10$qXoEHBgsNxeGsLSellHKiOB3hiGYNLENwwjGNGxnKKFZ8f.NIaRpa	+77023456789	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-5	Федерация Тенниса Казахстана	$2a$10$VHCKIqp6pav6c/oAVnuvbe5UwThN7dC4TNVxZnLSiOlbb3yLnDjgi	+77076789012	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-6	Almaty Theatre	$2a$10$dgdpdjIHl.PyWOZOX7IjIOj5wWH9J8x8KoLPjhOcIdSmp2iQ0j4QC	+77472345678	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-7	Zhana Event	$2a$10$47FDXl7Ni.Of1KloARTWxulom2ZlifJ8hU3PHDyROjQTFL9ovQrKS	+77759876543	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-8	Сoncert Company	$2a$10$y7g3QuExPkGmjoWgrXrIxuiAhrCsSmP4dXG3S.F84CH5PZ64qHPzq	+77073332211	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-9	Stand Up KZ	$2a$10$U/xJPSbi32HCjDtvpGedJOV3R5zYy6Nw82TxXATjb5Bf7xrxswn4K	+77776543210	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-10	Eastern Star Events	$2a$10$xDxe.tRJFcBiMDKuiPYRu.TAGd5Ng6ugKK.Xiw/r6iHrZd1EGQL4u	+77017890123	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-11	Astana Opera	$2a$10$EGzN3OJKGPfEKgFNtwHYxuyTM/cs2s4TVqlzlXMXyX5YPX8kYjqKO	+77009998877	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-12	Qazaq Event	$2a$10$fEuPFPQKEp61p9HU8UljNOpVkkKLdqbR5jxpWNda4b1EF8cwBs6hi	+77015556677	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-13	Театр «ŞAM»	$2a$10$jmuuhIOvravgbNxQ0GDH5OsvHKj/kxPFZegusZVswsVc5Uu8..CjG	+77004567890	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-14	Центральный Цирк	$2a$10$m8PxSXuEPFAxdYfo/qLg3uMqwj7wH4FNi3o.loPnrV1ZLwQKzbt8W	+77079990011	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-15	Театр «Жастар»	$2a$10$vLX/MPcVaPCst8A8/Lf5Rum0BRwD/n6HF22VnnVqCXCSpkodKhd7m	+77012345000	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-16	FinTech KZ	$2a$10$K.esmz6Gyddjtlfzj28wDO9tak6vxO99BXBwPYdKtmYwRoPQdQ4Xm	+77075550000	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-17	ПФЛК	$2a$10$V4cQItnuPunZobTACHL6EeuwVFlUAx8WraDVlBsfJfecgIfzfYxuS	+77011110000	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-18	KidShow Company	$2a$10$J7yoIzDC2K4VvWzfu6Sot.9lMcugiE1go9yWGuCb1fV1VOmcho3QO	+77778889900	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-19	Stand Up Agency	$2a$10$fTptZifvYU527cMcfP83qu9czzPSMYO6E/bnh7ETWy9YrcZSoRb9G	+77056667788	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-20	КХЛ / ХК «Барыс»	$2a$10$slhYnEwVf4PZraonJqUv0.WK98KBvrcKUrgusc3.kspW3Tulp//j.	+77013456789	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-22	TEDxAlmaty Team	$2a$10$4cnkFOv390kDQfs.rZAo9OeokU7BEUKaI.YyPeQbGI0jmQjPO2TJq	+77717778899	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-23	Rock Fest KZ	$2a$10$6pZTkfapvLpr2y1gEfQ.lOor6UffZJJdi7EXiEKlvpOdFTRdnwOwm	+77071234560	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-24	Ministry of Culture	$2a$10$M72wnJ4885t8TEenwf/jG.v5BnolHF9sCz2Q6XFA52nif8f4HisLq	+77001112233	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-25	Broadway Shows KZ	$2a$10$d0fwh5iwXmXev9x88whiVuqa4yNHGWfoW4LOPkV8tKyAQgLU8eg6W	+77078887766	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-26	Jazz Club Almaty	$2a$10$6qAEVHB3EyOJ.5mceGqq7uAZTAhQv/qi1HNI52r8mmNlrNv4IWnkO	+77055554433	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-27	Psychology Pro	$2a$10$siDVvDsq1pv/nFmGcaUebu6rp1KEDKQDDtQrCtnDOYgKhMCINfXNG	+77014443322	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N
-31	trofim	$2a$10$Lv212r0QRc0Zpg4PHjEYDufcLv6EKlx2cUatVkP7YCs7oU4nhW2b6	+77021394002	\N	\N	USER	\N	\N	\N	\N	\N	\N
-1	Chaplin Cinemas	$2a$10$n9cojXy.PvSkkJT1C/joFOrQ/dVRWm3.TmYWUvLBPNkyFPSi.sd5e	+77771234567	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	cus_TsFY1rqJwuyvR4
-30	itszhdi	$2a$10$FJ3kQKESmL6jNVTlYJqTIeC1woc/6Nx8wW2OrHNjZls72yojCmdv.	+77021036038	muptea@gmail.com	/uploads/user_photos/d390f0d9-06f6-45f8-961d-9b25b8956a97.jpg	USER	\N	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMCIsImlhdCI6MTc3MDI4NTM5MywiZXhwIjoxNzcwODkwMTkzfQ.XNVorLH0x1tFpLyZ985HzySyYBnLmgdjl1dLrWsgKLE	\N	\N	\N	cus_TvFqFuUMQmCGHk
-21	Qazaqconcert	$2a$10$mdthuz6Nls8EGzMkHxFsbuTo9NqR71tnoJctU1RAd5SrQ/0ClUK3m	+77563221234	kazakhConcert@proton.me	/uploads/user_photos/8e290138-bf13-4b00-b6c8-a96ddb4f8104.jpg	ORGANISATOR	\N	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTc3MDI2NTIyOSwiZXhwIjoxNzcwODcwMDI5fQ.QPnubakCVuR6gsHkvhO4qOX3jRIDZnkVptVoGqVI3hA	\N	\N	\N	\N
-28	The Bus	$2a$10$XTPqiymusq4bvx4dV4haFufh.Jxkc1jOM.tkVkLTz7nd60qoEyCoq	+77773331122	theBusmail@mail.ru	/userPhotos/28_1761649446698.jpg	ORGANISATOR	\N	\N	\N	\N	\N	\N
-32	svetlana	$2a$10$q1BYLEWR6f5/Ysh9JeSh5eoirGJSlN7A3eS9BG3qK0.kLbDE7r15y	+77017684020	svetlana08312@mail.ru	/uploads/user_photos/304ce224-3fcb-4f26-8fce-5a4a1f1d686d.jpg	USER	\N	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMiIsImlhdCI6MTc3MDI2NTI3MCwiZXhwIjoxNzcwODcwMDcwfQ.zCZ1623K296qkdVbT_oyoX5ITIrwn4sD9-dfZBULF8Y	\N	\N	\N	cus_TsuNSK1btXsNQu
+COPY public.users (user_id, user_name, password, phone_number, email, user_photo, role, otp, refresh_token, otp_expiry_date, password_reset_token, password_reset_token_expiry_date, stripe_customer_id, is_blocked) FROM stdin;
+2	Kazakh Concert Prod.	$2a$10$EDJorePW9wFtGRUiZunugOSY5aohl9l3cxY9Th45AJCZFEYiP59zS	+77019876543	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+3	Good Event Management	$2a$10$wkj6rvuPCetay4h8.FC9Su71M4hZj/.EYjkt8FJioUzubFtBZA/6m	+77080123456	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+4	Astana Concert Agency	$2a$10$qXoEHBgsNxeGsLSellHKiOB3hiGYNLENwwjGNGxnKKFZ8f.NIaRpa	+77023456789	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+5	Федерация Тенниса Казахстана	$2a$10$VHCKIqp6pav6c/oAVnuvbe5UwThN7dC4TNVxZnLSiOlbb3yLnDjgi	+77076789012	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+6	Almaty Theatre	$2a$10$dgdpdjIHl.PyWOZOX7IjIOj5wWH9J8x8KoLPjhOcIdSmp2iQ0j4QC	+77472345678	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+7	Zhana Event	$2a$10$47FDXl7Ni.Of1KloARTWxulom2ZlifJ8hU3PHDyROjQTFL9ovQrKS	+77759876543	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+8	Сoncert Company	$2a$10$y7g3QuExPkGmjoWgrXrIxuiAhrCsSmP4dXG3S.F84CH5PZ64qHPzq	+77073332211	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+9	Stand Up KZ	$2a$10$U/xJPSbi32HCjDtvpGedJOV3R5zYy6Nw82TxXATjb5Bf7xrxswn4K	+77776543210	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+10	Eastern Star Events	$2a$10$xDxe.tRJFcBiMDKuiPYRu.TAGd5Ng6ugKK.Xiw/r6iHrZd1EGQL4u	+77017890123	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+11	Astana Opera	$2a$10$EGzN3OJKGPfEKgFNtwHYxuyTM/cs2s4TVqlzlXMXyX5YPX8kYjqKO	+77009998877	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+12	Qazaq Event	$2a$10$fEuPFPQKEp61p9HU8UljNOpVkkKLdqbR5jxpWNda4b1EF8cwBs6hi	+77015556677	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+13	Театр «ŞAM»	$2a$10$jmuuhIOvravgbNxQ0GDH5OsvHKj/kxPFZegusZVswsVc5Uu8..CjG	+77004567890	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+14	Центральный Цирк	$2a$10$m8PxSXuEPFAxdYfo/qLg3uMqwj7wH4FNi3o.loPnrV1ZLwQKzbt8W	+77079990011	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+15	Театр «Жастар»	$2a$10$vLX/MPcVaPCst8A8/Lf5Rum0BRwD/n6HF22VnnVqCXCSpkodKhd7m	+77012345000	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+16	FinTech KZ	$2a$10$K.esmz6Gyddjtlfzj28wDO9tak6vxO99BXBwPYdKtmYwRoPQdQ4Xm	+77075550000	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+17	ПФЛК	$2a$10$V4cQItnuPunZobTACHL6EeuwVFlUAx8WraDVlBsfJfecgIfzfYxuS	+77011110000	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+18	KidShow Company	$2a$10$J7yoIzDC2K4VvWzfu6Sot.9lMcugiE1go9yWGuCb1fV1VOmcho3QO	+77778889900	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+19	Stand Up Agency	$2a$10$fTptZifvYU527cMcfP83qu9czzPSMYO6E/bnh7ETWy9YrcZSoRb9G	+77056667788	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+20	КХЛ / ХК «Барыс»	$2a$10$slhYnEwVf4PZraonJqUv0.WK98KBvrcKUrgusc3.kspW3Tulp//j.	+77013456789	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+22	TEDxAlmaty Team	$2a$10$4cnkFOv390kDQfs.rZAo9OeokU7BEUKaI.YyPeQbGI0jmQjPO2TJq	+77717778899	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+23	Rock Fest KZ	$2a$10$6pZTkfapvLpr2y1gEfQ.lOor6UffZJJdi7EXiEKlvpOdFTRdnwOwm	+77071234560	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+24	Ministry of Culture	$2a$10$M72wnJ4885t8TEenwf/jG.v5BnolHF9sCz2Q6XFA52nif8f4HisLq	+77001112233	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+25	Broadway Shows KZ	$2a$10$d0fwh5iwXmXev9x88whiVuqa4yNHGWfoW4LOPkV8tKyAQgLU8eg6W	+77078887766	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+26	Jazz Club Almaty	$2a$10$6qAEVHB3EyOJ.5mceGqq7uAZTAhQv/qi1HNI52r8mmNlrNv4IWnkO	+77055554433	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+27	Psychology Pro	$2a$10$siDVvDsq1pv/nFmGcaUebu6rp1KEDKQDDtQrCtnDOYgKhMCINfXNG	+77014443322	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+31	trofim	$2a$10$Lv212r0QRc0Zpg4PHjEYDufcLv6EKlx2cUatVkP7YCs7oU4nhW2b6	+77021394002	\N	\N	USER	\N	\N	\N	\N	\N	\N	f
+1	Chaplin Cinemas	$2a$10$n9cojXy.PvSkkJT1C/joFOrQ/dVRWm3.TmYWUvLBPNkyFPSi.sd5e	+77771234567	\N	\N	ORGANISATOR	\N	\N	\N	\N	\N	cus_TsFY1rqJwuyvR4	f
+30	itszhdi	$2a$10$FJ3kQKESmL6jNVTlYJqTIeC1woc/6Nx8wW2OrHNjZls72yojCmdv.	+77021036038	muptea@gmail.com	/uploads/user_photos/d390f0d9-06f6-45f8-961d-9b25b8956a97.jpg	USER	\N	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMCIsImlhdCI6MTc3MDI4NTM5MywiZXhwIjoxNzcwODkwMTkzfQ.XNVorLH0x1tFpLyZ985HzySyYBnLmgdjl1dLrWsgKLE	\N	\N	\N	cus_TvFqFuUMQmCGHk	f
+21	Qazaqconcert	$2a$10$mdthuz6Nls8EGzMkHxFsbuTo9NqR71tnoJctU1RAd5SrQ/0ClUK3m	+77563221234	kazakhConcert@proton.me	/uploads/user_photos/8e290138-bf13-4b00-b6c8-a96ddb4f8104.jpg	ORGANISATOR	\N	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMSIsImlhdCI6MTc3MDI2NTIyOSwiZXhwIjoxNzcwODcwMDI5fQ.QPnubakCVuR6gsHkvhO4qOX3jRIDZnkVptVoGqVI3hA	\N	\N	\N	\N	f
+28	The Bus	$2a$10$XTPqiymusq4bvx4dV4haFufh.Jxkc1jOM.tkVkLTz7nd60qoEyCoq	+77773331122	theBusmail@mail.ru	/userPhotos/28_1761649446698.jpg	ORGANISATOR	\N	\N	\N	\N	\N	\N	f
+33	Admin	$2a$10$SMQ2pZFSfKTK/jzOa3dIAO.oeZ4lBjQ7x3kvN4e.DC4Ykm7JK2z/q	+77009849868	\N	\N	ADMIN	\N	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzMyIsImlhdCI6MTc3MDYyNzg3MywiZXhwIjoxNzcxMjMyNjczfQ.TkJtTLfqekg5IgkQLmi56gqoRIxC-Yyw1Z_0GiRZUP8	\N	\N	\N	\N	f
 \.
 
 
 --
--- TOC entry 4971 (class 0 OID 0)
+-- TOC entry 4972 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: age_restrictions_age_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -894,7 +886,7 @@ SELECT pg_catalog.setval('public.age_restrictions_age_id_seq', 7, true);
 
 
 --
--- TOC entry 4972 (class 0 OID 0)
+-- TOC entry 4973 (class 0 OID 0)
 -- Dependencies: 232
 -- Name: cards_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -903,7 +895,7 @@ SELECT pg_catalog.setval('public.cards_token_id_seq', 6, true);
 
 
 --
--- TOC entry 4973 (class 0 OID 0)
+-- TOC entry 4974 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -912,16 +904,16 @@ SELECT pg_catalog.setval('public.categories_category_id_seq', 10, true);
 
 
 --
--- TOC entry 4974 (class 0 OID 0)
+-- TOC entry 4975 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: cities_city_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.cities_city_id_seq', 14, true);
+SELECT pg_catalog.setval('public.cities_city_id_seq', 15, true);
 
 
 --
--- TOC entry 4975 (class 0 OID 0)
+-- TOC entry 4976 (class 0 OID 0)
 -- Dependencies: 228
 -- Name: events_event_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -930,25 +922,25 @@ SELECT pg_catalog.setval('public.events_event_id_seq', 91, true);
 
 
 --
--- TOC entry 4976 (class 0 OID 0)
+-- TOC entry 4977 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: organisators_organisator_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.organisators_organisator_id_seq', 28, true);
-
-
---
--- TOC entry 4977 (class 0 OID 0)
--- Dependencies: 226
--- Name: promocodes_promocode_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.promocodes_promocode_id_seq', 4, true);
+SELECT pg_catalog.setval('public.organisators_organisator_id_seq', 29, true);
 
 
 --
 -- TOC entry 4978 (class 0 OID 0)
+-- Dependencies: 226
+-- Name: promocodes_promocode_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.promocodes_promocode_id_seq', 5, true);
+
+
+--
+-- TOC entry 4979 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: tickets_ticket_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -957,16 +949,16 @@ SELECT pg_catalog.setval('public.tickets_ticket_id_seq', 206, true);
 
 
 --
--- TOC entry 4979 (class 0 OID 0)
+-- TOC entry 4980 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 32, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 33, true);
 
 
 --
--- TOC entry 4757 (class 2606 OID 59672)
+-- TOC entry 4758 (class 2606 OID 59672)
 -- Name: age_restrictions age_restrictions_age_category_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -975,7 +967,7 @@ ALTER TABLE ONLY public.age_restrictions
 
 
 --
--- TOC entry 4759 (class 2606 OID 59670)
+-- TOC entry 4760 (class 2606 OID 59670)
 -- Name: age_restrictions age_restrictions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -984,7 +976,7 @@ ALTER TABLE ONLY public.age_restrictions
 
 
 --
--- TOC entry 4784 (class 2606 OID 59773)
+-- TOC entry 4785 (class 2606 OID 59773)
 -- Name: cards cards_payment_token_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -993,7 +985,7 @@ ALTER TABLE ONLY public.cards
 
 
 --
--- TOC entry 4786 (class 2606 OID 59771)
+-- TOC entry 4787 (class 2606 OID 59771)
 -- Name: cards cards_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1002,7 +994,7 @@ ALTER TABLE ONLY public.cards
 
 
 --
--- TOC entry 4761 (class 2606 OID 59681)
+-- TOC entry 4762 (class 2606 OID 59681)
 -- Name: categories categories_category_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1011,7 +1003,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- TOC entry 4763 (class 2606 OID 59679)
+-- TOC entry 4764 (class 2606 OID 59679)
 -- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1020,7 +1012,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- TOC entry 4765 (class 2606 OID 59690)
+-- TOC entry 4766 (class 2606 OID 59690)
 -- Name: cities cities_city_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1029,7 +1021,7 @@ ALTER TABLE ONLY public.cities
 
 
 --
--- TOC entry 4767 (class 2606 OID 59688)
+-- TOC entry 4768 (class 2606 OID 59688)
 -- Name: cities cities_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1038,7 +1030,7 @@ ALTER TABLE ONLY public.cities
 
 
 --
--- TOC entry 4773 (class 2606 OID 59708)
+-- TOC entry 4774 (class 2606 OID 59708)
 -- Name: events events_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1047,7 +1039,7 @@ ALTER TABLE ONLY public.events
 
 
 --
--- TOC entry 4744 (class 2606 OID 59635)
+-- TOC entry 4745 (class 2606 OID 59635)
 -- Name: flyway_schema_history flyway_schema_history_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1056,7 +1048,7 @@ ALTER TABLE ONLY public.flyway_schema_history
 
 
 --
--- TOC entry 4753 (class 2606 OID 59656)
+-- TOC entry 4754 (class 2606 OID 59656)
 -- Name: organisators organisators_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1065,7 +1057,7 @@ ALTER TABLE ONLY public.organisators
 
 
 --
--- TOC entry 4755 (class 2606 OID 59658)
+-- TOC entry 4756 (class 2606 OID 59658)
 -- Name: organisators organisators_user_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1074,7 +1066,7 @@ ALTER TABLE ONLY public.organisators
 
 
 --
--- TOC entry 4769 (class 2606 OID 59697)
+-- TOC entry 4770 (class 2606 OID 59697)
 -- Name: promocodes promocodes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1083,7 +1075,7 @@ ALTER TABLE ONLY public.promocodes
 
 
 --
--- TOC entry 4771 (class 2606 OID 59699)
+-- TOC entry 4772 (class 2606 OID 59699)
 -- Name: promocodes promocodes_promocode_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1092,7 +1084,7 @@ ALTER TABLE ONLY public.promocodes
 
 
 --
--- TOC entry 4782 (class 2606 OID 59739)
+-- TOC entry 4783 (class 2606 OID 59739)
 -- Name: tickets tickets_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1101,7 +1093,7 @@ ALTER TABLE ONLY public.tickets
 
 
 --
--- TOC entry 4747 (class 2606 OID 59649)
+-- TOC entry 4748 (class 2606 OID 59649)
 -- Name: users users_phone_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1110,7 +1102,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 4749 (class 2606 OID 59645)
+-- TOC entry 4750 (class 2606 OID 59645)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1119,7 +1111,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 4751 (class 2606 OID 59647)
+-- TOC entry 4752 (class 2606 OID 59647)
 -- Name: users users_user_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1128,7 +1120,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 4745 (class 1259 OID 59636)
+-- TOC entry 4746 (class 1259 OID 59636)
 -- Name: flyway_schema_history_s_idx; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1136,7 +1128,7 @@ CREATE INDEX flyway_schema_history_s_idx ON public.flyway_schema_history USING b
 
 
 --
--- TOC entry 4774 (class 1259 OID 59729)
+-- TOC entry 4775 (class 1259 OID 59729)
 -- Name: idx_events_age_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1144,7 +1136,7 @@ CREATE INDEX idx_events_age_id ON public.events USING btree (age_id);
 
 
 --
--- TOC entry 4775 (class 1259 OID 59730)
+-- TOC entry 4776 (class 1259 OID 59730)
 -- Name: idx_events_category_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1152,7 +1144,7 @@ CREATE INDEX idx_events_category_id ON public.events USING btree (category_id);
 
 
 --
--- TOC entry 4776 (class 1259 OID 59731)
+-- TOC entry 4777 (class 1259 OID 59731)
 -- Name: idx_events_city_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1160,7 +1152,7 @@ CREATE INDEX idx_events_city_id ON public.events USING btree (city_id);
 
 
 --
--- TOC entry 4777 (class 1259 OID 59732)
+-- TOC entry 4778 (class 1259 OID 59732)
 -- Name: idx_events_organisator_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1168,7 +1160,7 @@ CREATE INDEX idx_events_organisator_id ON public.events USING btree (organisator
 
 
 --
--- TOC entry 4778 (class 1259 OID 59751)
+-- TOC entry 4779 (class 1259 OID 59751)
 -- Name: idx_tickets_event_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1176,7 +1168,7 @@ CREATE INDEX idx_tickets_event_id ON public.tickets USING btree (event_id);
 
 
 --
--- TOC entry 4779 (class 1259 OID 59833)
+-- TOC entry 4780 (class 1259 OID 59833)
 -- Name: idx_tickets_user_event; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1184,7 +1176,7 @@ CREATE INDEX idx_tickets_user_event ON public.tickets USING btree (user_id, even
 
 
 --
--- TOC entry 4780 (class 1259 OID 59750)
+-- TOC entry 4781 (class 1259 OID 59750)
 -- Name: idx_tickets_user_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -1192,7 +1184,7 @@ CREATE INDEX idx_tickets_user_id ON public.tickets USING btree (user_id);
 
 
 --
--- TOC entry 4794 (class 2606 OID 59774)
+-- TOC entry 4795 (class 2606 OID 59774)
 -- Name: cards cards_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1201,7 +1193,7 @@ ALTER TABLE ONLY public.cards
 
 
 --
--- TOC entry 4788 (class 2606 OID 59709)
+-- TOC entry 4789 (class 2606 OID 59709)
 -- Name: events events_age_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1210,7 +1202,7 @@ ALTER TABLE ONLY public.events
 
 
 --
--- TOC entry 4789 (class 2606 OID 59714)
+-- TOC entry 4790 (class 2606 OID 59714)
 -- Name: events events_category_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1219,7 +1211,7 @@ ALTER TABLE ONLY public.events
 
 
 --
--- TOC entry 4790 (class 2606 OID 59719)
+-- TOC entry 4791 (class 2606 OID 59719)
 -- Name: events events_city_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1228,7 +1220,7 @@ ALTER TABLE ONLY public.events
 
 
 --
--- TOC entry 4791 (class 2606 OID 59724)
+-- TOC entry 4792 (class 2606 OID 59724)
 -- Name: events events_organisator_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1237,7 +1229,7 @@ ALTER TABLE ONLY public.events
 
 
 --
--- TOC entry 4787 (class 2606 OID 59659)
+-- TOC entry 4788 (class 2606 OID 59659)
 -- Name: organisators organisators_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1246,7 +1238,7 @@ ALTER TABLE ONLY public.organisators
 
 
 --
--- TOC entry 4792 (class 2606 OID 59745)
+-- TOC entry 4793 (class 2606 OID 59745)
 -- Name: tickets tickets_event_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1255,7 +1247,7 @@ ALTER TABLE ONLY public.tickets
 
 
 --
--- TOC entry 4793 (class 2606 OID 59740)
+-- TOC entry 4794 (class 2606 OID 59740)
 -- Name: tickets tickets_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1263,7 +1255,7 @@ ALTER TABLE ONLY public.tickets
     ADD CONSTRAINT tickets_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
 
 
--- Completed on 2026-02-05 21:10:21
+-- Completed on 2026-02-09 15:21:01
 
 --
 -- PostgreSQL database dump complete
