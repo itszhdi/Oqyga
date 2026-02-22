@@ -1,0 +1,322 @@
+{
+  "@@locale": "en",
+  "usernameLabel": "Username",
+  "passwordLabel": "Password",
+  "forgotPassword": "Forgot password?",
+  "signInButton": "Sign In",
+  "noAccountLink": "No account?",
+  "emptyError": "Enter {field}",
+  "passwordError": "Password must be at least 8 characters",
+  "phoneEmpty": "Enter phone number",
+  "phoneFormat": "Format: +77001234567",
+  "passwordEmpty": "Enter password",
+  "passwordLength": "Password must be at least 8 characters",
+
+  "phoneLabel": "Phone number",
+  "phoneHint": "+77001234567",
+  "confirmPasswordLabel": "Confirm password",
+  "passwordsDoNotMatchError": "Passwords do not match",
+  "signUpButton": "Sign Up",
+  "alreadyHaveAccountLink": "Already have an account?",
+  "usernameEmpty": "Enter username",
+  "confirmPasswordEmpty": "Confirm your password",
+  "signUpError": "Sign-up error: {errorMessage}",
+  "@signUpError": {
+    "description": "Error message shown on sign-up failure",
+    "placeholders": {
+      "errorMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "signUpSuccess": "Registration successful!",
+  "signInError": "Sign-in error: {errorMessage}",
+  "@signInError": {
+    "description": "Error message shown on sign-in failure",
+    "placeholders": {
+      "errorMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "signInSuccess": "Login successful!",
+  "unexpectedError": "An unexpected error occurred",
+  "invalidCredentialsError": "Invalid username or password",
+  "signInFailedError": "Sign-in failed!",
+  "signUpFailedError": "Registration failed",
+  "tokenRefreshFailedError": "Failed to refresh token",
+   "failedToGetEvents": "Failed to get events",
+  "networkError": "Network error",
+  "failedToGetEvent": "Failed to get event",
+  "failedToLoadMyEvents": "Error loading your events",
+
+  "untitledEvent": "Untitled",
+  "noDescription": "No description",
+  "addressNotSpecified": "Address not specified",
+  "cityNotSpecified": "City not specified",
+  "ticketTypeStandard": "Standard",
+
+  "invalidEventId": "Invalid event ID",
+  
+  "errorPrefix": "Error: ",
+  "eventNotFound": "Event not found",
+  "buyTicket": "Buy Ticket",
+  "eventHasPassed": "Event has passed",
+  "soldOut": "Sold Out",
+  
+  "findYourEvent": "Find your event",
+  "errorLoadingEvents": "Error loading events!",
+  "noEventsFoundForQuery": "No events found for your request",
+  "eventListIsEmpty": "The event list is empty",
+   "failedToLoadCities": "Failed to load cities",
+  "failedToLoadCategories": "Failed to load categories",
+  "failedToLoadAgeRestrictions": "Failed to load age restrictions",
+  "failedToLoadFilterOptions": "Failed to load filter options",
+  
+  "priceLabel": "Price",
+  "priceFromHint": "From",
+  "priceToHint": "To",
+  "cityLabel": "City",
+  "timeLabel": "Time",
+  "dateRangeHint": "Date - Date",
+  "timeRangeHint": "Time - Time",
+  "filterButtonText": "Filter",
+  "retryButton": "Retry",
+  
+  "eventFiltersTitle": "Event Filters",
+  "categoryLabel": "Category",
+  "ageRestrictionLabel": "Age Restriction",
+  
+  "organizerFiltersTitle": "Organizer Filters",
+  "venueLabel": "Venue",
+  
+  "ticketFiltersTitle": "Ticket Filters",
+  "statusLabel": "Status",
+  "statusActive": "Active",
+  "statusInactive": "Inactive",
+    "failedToSendOtp": "Failed to send code",
+  "invalidOtp": "Invalid code",
+  "failedToResetPassword": "Failed to reset password",
+  
+  "passwordResetSuccess": "Password successfully changed!",
+  "resetPasswordTitle": "Reset Password",
+  "enterPhoneToResetDescription": "Enter your phone number to receive a verification code.",
+  "sendCodeButton": "Send Code",
+  "fieldCannotBeEmpty": "Field cannot be empty",
+  
+  "otpSentDescription": "We sent a code to {phoneNumber}.\nEnter it below.",
+  "@otpSentDescription": {
+    "placeholders": {
+      "phoneNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "otpLabel": "Verification code",
+  "enterOtpError": "Enter code",
+  "confirmButton": "Confirm",
+  
+  "newPasswordTitle": "New Password",
+  "enterNewPasswordDescription": "Enter your new password",
+  "newPasswordLabel": "New Password",
+  "saveButton": "Save",
+  "errorLoadingTickets": "Error loading tickets",
+  "errorLoadingTicketDetails": "Failed to load ticket details",
+  "errorLoadingQrCode": "Failed to load QR code",
+  "errorPurchasingTicket": "Error purchasing ticket",
+  
+  "noTicketPriceInfo": "No ticket price information",
+  "userNotAuthorized": "User not authorized",
+  "seatsNotSelected": "Seats not selected",
+  
+  "posterNotFound": "Poster\nnot found",
+  "stageLabel": "STAGE",
+  "seatSelected": "Selected",
+  "seatBooked": "Booked",
+  "seatTooltip": "Row: {row}, Seat: {number}, Price: {price} ₸",
+  "@seatTooltip": {
+    "placeholders": {
+      "row": {"type": "int"},
+      "number": {"type": "int"},
+      "price": {"type": "double"}
+    }
+  },
+  
+  "seatInHall": "Seat in hall",
+  "ticketCount": "Ticket count",
+  "showTicketToStaff": "Show the ticket\nto our staff!",
+  "myTicketTitle": "My Ticket",
+  
+  "myTicketsTitle": "My Tickets",
+  "noTicketsFound": "No tickets found for your request",
+  "noTicketsYet": "You have no purchased tickets yet",
+  "ticketStatusActive": "Active",
+  
+  "processingPayment": "Processing...",
+  "payButton": "Pay {amount} ₸",
+  "@payButton": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "choosePaymentMethod": "Please select a payment method",
+  "serviceFeeLabel": "Service fee (10%)",
+  "totalPriceLabel": "Total price",
+  "seatsNotSelectedLabel": "Seats not selected",
+  "seatRowAndNumber": "Row {row}, Seat {number}",
+  "@seatRowAndNumber": {
+    "placeholders": {
+      "row": {"type": "int"},
+      "number": {"type": "int"}
+    }
+  },
+  
+  "ticketBookingTitle": "Ticket Booking",
+  "selectedSeatsDescription": "{count} ticket(s): row {row}, seat {number}...",
+  "@selectedSeatsDescription": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "row": {"type": "int"},
+      "number": {"type": "int"}
+    }
+  },
+  "totalPriceWithCount": "{count} ticket(s): {amount} ₸",
+  "@totalPriceWithCount": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "amount": {"type": "String"}
+    }
+  },
+  "checkoutButton": "Checkout",
+  "search": "Search",
+  "selectAtLeastOneSeat": "Please select at least one seat",
+  "noDataForTicket": "No data to display ticket.",
+  "errorLoadingProfile": "Error loading profile",
+  "errorUpdatingProfile": "Error updating profile",
+  "errorChangingPassword": "Failed to change password",
+  "errorUploadingPhoto": "Failed to upload photo",
+  "errorUploadingPhotoWithReason": "Error uploading photo: {reason}",
+  "@errorUploadingPhotoWithReason": {
+    "placeholders": {
+      "reason": {"type": "String"}
+    }
+  },
+  
+  "uploadingPhoto": "Uploading photo...",
+  "savingChanges": "Saving changes...",
+  "changingPassword": "Changing password...",
+  "photoUpdatedSuccess": "Photo updated successfully",
+  "profileUpdatedSuccess": "Profile updated successfully",
+  "passwordChangedSuccess": "Password changed successfully",
+  
+  "profileTitle": "Profile",
+  "yourDataTitle": "Your Data",
+  "editProfileTitle": "Edit",
+  "changePasswordTitle": "Change Password",
+  
+    "logoutButton": "Log Out",
+  
+  "logoutDialogTitle": "Do you really want to log out?",
+  "noButton": "No",
+  "yesLogoutButton": "Log Out",
+  
+  "changePhotoLabel": "Change Photo",
+   "notSpecified": "Not specified",
+  "paymentMethodsTitle": "Payment Methods",
+  "yourCards": "Your Cards",
+  "appLanguageTitle": "App Language",
+  "emailLabel": "E-mail",
+  "currentPasswordLabel": "Current Password",
+  "errorCreatingEvent": "Error creating event",
+  "errorUpdatingEvent": "Error updating event",
+  "errorDeletingEvent": "Failed to delete event",
+  "errorLoadingVenues": "Failed to load venues list",
+  
+  "addEventTitle": "Add Event",
+  "editEventTitle": "Edit Event",
+  "eventCreatedSuccess": "Event successfully created!",
+  "eventUpdatedSuccess": "Event successfully updated!",
+  
+  "organizerTitle": "Organizer",
+  "yourOrganizationTitle": "Your Organization",
+  "organizationNameLabel": "Organization Name",
+  
+  "maxTicketCategoriesError": "Maximum 5 price categories",
+  "addPosterAndTitleError": "Add a poster and fill in the title",
+  "fillAllTicketDataError": "Fill in data for all ticket categories",
+  
+  "basicInfoTitle": "Basic Information",
+  "eventNameHint": "Event Name",
+  "dateHint": "Date",
+  "timeHint": "Time",
+  "chooseCityHint": "Choose City",
+  "categoryHint": "Category",
+  "venueAddressHint": "Venue Address",
+  
+  "pricesAndTicketsTitle": "Prices and Tickets",
+  "ticketNameHint": "Name (e.g. VIP, Standard)",
+  "deleteCategoryTooltip": "Delete Category",
+  "priceHint": "Price",
+  "seatsAmountHint": "Seats (qty)",
+  "addPriceCategoryButton": "Add Price Category",
+  "standardTicketName": "Standard",
+  
+  "descriptionTitle": "Description",
+  "eventDescriptionHint": "Tell about the event...",
+  
+  "myEventsTitle": "My Events",
+  "noEventsFound": "No events found for your request",
+  "noCreatedEvents": "You haven't created any events yet",
+  
+  "deleteConfirmationTitle": "Delete Confirmation",
+  "deleteEventConfirmation": "Do you really want to delete \"{itemName}\"?",
+  "@deleteEventConfirmation": {
+    "placeholders": {
+      "itemName": {"type": "String"}
+    }
+  },
+  "deleteButton": "Delete",
+  "cancelButton": "Cancel",
+  
+  "changePoster": "Change Poster",
+  "addPoster": "Add Poster",
+  "language": "Language",
+  "chooseLanguage": "Choose language",
+  "failedToGetCards": "Failed to get cards",
+  "failedToCreatePaymentMethod": "Failed to create payment method",
+  "myCards": "My Cards",
+  "newCard": "New Card",
+  "cardAddedSuccess": "Card added successfully",
+  "invalidDateFormat": "Invalid date format",
+  "errorAddingCard": "Error adding card",
+  "cardNumberLabel": "Card Number",
+  "cardNumberHint": "0000 0000 0000 0000",
+  "expiryDateLabel": "Expiry Date (MM/YY)",
+  "cvvLabel": "CVV",
+  "linkCard": "Link Card",
+  "enterCardNumber": "Enter Card Number",
+  "cardNumberTooShort": "Card number is too short",
+  "invalidCardNumber": "Invalid card number",
+  "fieldRequired": "Field is required",
+  "invalidFormat": "Invalid format",
+  "invalidCvv": "Invalid CVV",
+  "cardsTitle": "Cards",
+  "noSavedCards": "No saved cards",
+  "oneTimeCard": "New card (one-time)",
+  "addCard": "Add card",
+  "saveCardForLater": "Save card for future payments",
+   "confirm_city_title": "Is your city {cityName}?",
+  "confirm_city_content": "Show events in this city?",
+  "select_city_title": "Select a city",
+  "yes": "Yes",
+  "no": "No",
+  "loading": "Loading...",
+  "go_to_event": "Go to",
+  "enterPromoCodeTitle": "Enter promo code",
+  "promoCodeHint": "Promo code",
+  "applyButton": "Apply",
+  "enterPromoCodeButton": "Enter promo code",
+  "appliedPromoCodeLabel": "Promo code: {code}",
+  "promoCodeSuccess": "Promo code applied!",
+  "discountLabel": "Discount ({percent}%)"
+}

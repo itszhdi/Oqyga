@@ -1,0 +1,321 @@
+{
+  "@@locale": "kk",
+  "usernameLabel": "Paıdalanýshy aty",
+  "passwordLabel": "Qupıa sóz",
+  "forgotPassword": "Qupıa sózdi umyttyńyz ba?",
+  "signInButton": "Kirý",
+  "noAccountLink": "Tirkeldi joq pa?",
+  "emptyError": "{field} engizińiz",
+  "passwordError": "Qupıa sóz keminde 8 tańbadan turýy tıis",
+  "phoneEmpty": "Telefon nómirin engizińiz",
+  "phoneFormat": "Format: +77001234567",
+  "passwordEmpty": "Qupıa sózdi engizińiz",
+  "passwordLength": "Qupıa sóz keminde 8 tańbadan turýy tıis",
+
+  "phoneLabel": "Telefon nómiri",
+  "phoneHint": "+77001234567",
+  "confirmPasswordLabel": "Qupıa sózdi rastańyz",
+  "passwordsDoNotMatchError": "Qupıa sózder sáikes kelmeıdi",
+  "signUpButton": "Tirkelý",
+  "alreadyHaveAccountLink": "Akkaýnt bar ma?",
+  "usernameEmpty": "Paıdalanýshy atyn engizińiz",
+  "confirmPasswordEmpty": "Qupıa sózdi rastańyz",
+  "signUpError": "Tirkelý qatesi: {errorMessage}",
+  "@signUpError": {
+    "description": "Tirkelý kezindegi qate týraly habarlama",
+    "placeholders": {
+      "errorMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "signUpSuccess": "Tirkelý sátti ótti!",
+  "signInError": "Kirý qatesi: {errorMessage}",
+  "@signInError": {
+    "description": "Kirý kezindegi qate týraly habarlama",
+    "placeholders": {
+      "errorMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "signInSuccess": "Kirý sátti ótti!",
+  "unexpectedError": "Kútpegen qate oryn aldy",
+  "invalidCredentialsError": "Login nemese qupıa sóz qate",
+  "signInFailedError": "Kirý qatesi!",
+  "signUpFailedError": "Tirkelý qatesi",
+  "tokenRefreshFailedError": "Token jańartý sátsiz",
+  "failedToGetEvents": "Is-sharalardy alý sátsiz",
+  "networkError": "Jeli qatesi",
+  "failedToGetEvent": "Is-sharany alý sátsiz",
+  "failedToLoadMyEvents": "Is-sharalaryńyzdy júkteý qatesi",
+
+  "untitledEvent": "Ataýsyz",
+  "noDescription": "Sıpattama joq",
+  "addressNotSpecified": "Mekenjaı kórsetilmegen",
+  "cityNotSpecified": "Qala kórsetilmegen",
+  "ticketTypeStandard": "Standart",
+
+  "invalidEventId": "Is-shara ID qate",
+
+  "errorPrefix": "Qate: ",
+  "eventNotFound": "Is-shara tabylmady",
+  "buyTicket": "Bılet satyp alý",
+  "eventHasPassed": "Is-shara ótip ketti",
+  "soldOut": "Bıletter satylyp ketti",
+
+  "findYourEvent": "Óz is-sharańyzdy tabyńyz",
+  "errorLoadingEvents": "Is-sharalardy júkteý qatesi!",
+  "noEventsFoundForQuery": "Suraý boıynsha is-sharalar tabylmady",
+  "eventListIsEmpty": "Is-sharalar tizimi bos",
+  "failedToLoadCities": "Qalalardy júkteý sátsiz",
+  "failedToLoadCategories": "Sanattardy júkteý sátsiz",
+  "failedToLoadAgeRestrictions": "Jas shekteýlerin júkteý sátsiz",
+  "failedToLoadFilterOptions": "Súzgileý opsıalaryn júkteý sátsiz",
+
+  "priceLabel": "Baǵa",
+  "priceFromHint": "Bastap",
+  "priceToHint": "Deıin",
+  "cityLabel": "Qala",
+  "timeLabel": "Waqyt",
+  "dateRangeHint": "Kúni - Kúni",
+  "timeRangeHint": "Waqyt - Waqyt",
+  "filterButtonText": "Súzgileý",
+  "retryButton": "Qaıtalaý",
+
+  "eventFiltersTitle": "Is-shara súzgileri",
+  "categoryLabel": "Sanat",
+  "ageRestrictionLabel": "Jas shekteýi",
+
+  "organizerFiltersTitle": "Uıymdastyrýshy súzgileri",
+  "venueLabel": "Ótkizý orny",
+
+  "ticketFiltersTitle": "Bılet súzgileri",
+  "statusLabel": "Mártebe",
+  "statusActive": "Belsendi",
+  "statusInactive": "Belsendi emes",
+  "failedToSendOtp": "Kod jiberý sátsiz",
+  "invalidOtp": "Kod qate",
+  "failedToResetPassword": "Qupıa sózdi qalpyna keltirý sátsiz",
+
+  "passwordResetSuccess": "Qupıa sóz sátti ózgertildi!",
+  "resetPasswordTitle": "Qupıa sózdi qalpyna keltirý",
+  "enterPhoneToResetDescription": "Rastaý kodyn alý úshin telefon nómirińizdi engizińiz.",
+  "sendCodeButton": "Kod jiberý",
+  "fieldCannotBeEmpty": "Óris bos bolmaýy tıis",
+
+  "otpSentDescription": "Biz {phoneNumber} nómirine kod jiberdik.\nOny tómende engizińiz.",
+  "@otpSentDescription": {
+    "placeholders": {
+      "phoneNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "otpLabel": "Rastaý kody",
+  "enterOtpError": "Kodty engizińiz",
+  "confirmButton": "Rastaý",
+
+  "newPasswordTitle": "Jańa qupıa sóz",
+  "enterNewPasswordDescription": "Jańa qupıa sózińizdi engizińiz",
+  "newPasswordLabel": "Jańa qupıa sóz",
+  "saveButton": "Saqtaý",
+  "errorLoadingTickets": "Bıletterdi júkteý qatesi",
+  "errorLoadingTicketDetails": "Bılet derekterin júkteý sátsiz",
+  "errorLoadingQrCode": "QR-kodty júkteý sátsiz",
+  "errorPurchasingTicket": "Bılet satyp alý qatesi",
+
+  "noTicketPriceInfo": "Bılet baǵalary týraly aqparat joq",
+  "userNotAuthorized": "Paıdalanýshy avtorızatsıadan ótpegen",
+  "seatsNotSelected": "Oryndar tańdalmaǵan",
+
+  "posterNotFound": "Poster\ntabylmady",
+  "stageLabel": "SAHNA",
+  "seatSelected": "Tańdaldy",
+  "seatBooked": "Brondaldy",
+  "seatTooltip": "Qatar: {row}, Oryn: {number}, Baǵa: {price} ₸",
+  "@seatTooltip": {
+    "placeholders": {
+      "row": {"type": "int"},
+      "number": {"type": "int"},
+      "price": {"type": "double"}
+    }
+  },
+
+  "seatInHall": "Zaldaǵy oryn",
+  "ticketCount": "Bılet sany",
+  "showTicketToStaff": "Bıletti qyzmetkerimizge\nkórsetińiz!",
+  "myTicketTitle": "Meniń bıletim",
+
+  "myTicketsTitle": "Meniń bıletterim",
+  "noTicketsFound": "Suraý boıynsha bıletter tabylmady",
+  "noTicketsYet": "Sizde ázirge satyp alyńǵan bıletter joq",
+  "ticketStatusActive": "Belsendi",
+
+  "processingPayment": "Óńdelýde...",
+  "payButton": "Tóleý {amount} ₸",
+  "@payButton": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "choosePaymentMethod": "Tólem ádisin tańdańyz",
+  "serviceFeeLabel": "Qyzmet kórsetý (10%)",
+  "totalPriceLabel": "Jalpy quny",
+  "seatsNotSelectedLabel": "Oryndar tańdalmaǵan",
+  "seatRowAndNumber": "Qatar {row}, Oryn {number}",
+  "@seatRowAndNumber": {
+    "placeholders": {
+      "row": {"type": "int"},
+      "number": {"type": "int"}
+    }
+  },
+
+  "ticketBookingTitle": "Bıletti resimdeý",
+  "selectedSeatsDescription": "{count} bılet: {row}-qatar, {number}-oryn...",
+  "@selectedSeatsDescription": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "row": {"type": "int"},
+      "number": {"type": "int"}
+    }
+  },
+  "totalPriceWithCount": "{count} bılet: {amount} ₸",
+  "@totalPriceWithCount": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "amount": {"type": "String"}
+    }
+  },
+  "checkoutButton": "Resimdeý",
+  "search": "Izdeý",
+  "selectAtLeastOneSeat": "Kem degende bir oryn tańdańyz",
+  "noDataForTicket": "Bıletti kórsetý úshin derekter joq.",
+  "errorLoadingProfile": "Profildi júkteý qatesi",
+  "errorUpdatingProfile": "Profildi jańartý qatesi",
+  "errorChangingPassword": "Qupıa sózdi aýystyrý sátsiz",
+  "errorUploadingPhoto": "Fotony júkteý sátsiz",
+  "errorUploadingPhotoWithReason": "Foto júkteý qatesi: {reason}",
+  "@errorUploadingPhotoWithReason": {
+    "placeholders": {
+      "reason": {"type": "String"}
+    }
+  },
+
+  "uploadingPhoto": "Foto júktelýde...",
+  "savingChanges": "Ózgerister saqtalýda...",
+  "changingPassword": "Qupıa sóz aýystyrylýda...",
+  "photoUpdatedSuccess": "Foto sátti jańartyldy",
+  "profileUpdatedSuccess": "Profil sátti jańartyldy",
+  "passwordChangedSuccess": "Qupıa sóz sátti ózgertildi",
+
+  "profileTitle": "Profil",
+  "yourDataTitle": "Sizdiń derekterińiz",
+  "editProfileTitle": "Ózgertý",
+  "changePasswordTitle": "Qupıa sózdi aýystyrý",
+  "logoutButton": "Shyǵý",
+
+  "logoutDialogTitle": "Shynynda da shyqqyńyz kele me?",
+  "noButton": "Joq",
+  "yesLogoutButton": "Shyǵý",
+
+  "changePhotoLabel": "Fotony ózgertý",
+  "notSpecified": "Kórsetilmegen",
+  "paymentMethodsTitle": "Tólem ádisteri",
+  "yourCards": "Sizdiń kartalaryńyz",
+  "appLanguageTitle": "Qosymsha tili",
+  "emailLabel": "E-mail",
+  "currentPasswordLabel": "Aǵymdaǵy qupıa sóz",
+  "errorCreatingEvent": "Is-shara qurý qatesi",
+  "errorUpdatingEvent": "Is-shara jańartý qatesi",
+  "errorDeletingEvent": "Is-shara óshirý sátsiz",
+  "errorLoadingVenues": "Oryndar tizimin júkteý sátsiz",
+
+  "addEventTitle": "Is-shara qosý",
+  "editEventTitle": "Is-sharany ózgertý",
+  "eventCreatedSuccess": "Is-shara sátti quryldy!",
+  "eventUpdatedSuccess": "Is-shara sátti jańartyldy!",
+
+  "organizerTitle": "Uıymdastyrýshy",
+  "yourOrganizationTitle": "Sizdiń uıym",
+  "organizationNameLabel": "Uıym ataýy",
+
+  "maxTicketCategoriesError": "Eń kóbi 5 baǵa sanaty",
+  "addPosterAndTitleError": "Poster qosyp, ataýyn toltyryńyz",
+  "fillAllTicketDataError": "Barlyq bılet sanattarynyń derekterin toltyryńyz",
+
+  "basicInfoTitle": "Negizgi aqparat",
+  "eventNameHint": "Is-shara ataýy",
+  "dateHint": "Kúni",
+  "timeHint": "Waqyt",
+  "chooseCityHint": "Qalany tańdańyz",
+  "categoryHint": "Sanat",
+  "venueAddressHint": "Ótkizý orny",
+
+  "pricesAndTicketsTitle": "Baǵalar jáne bıletter",
+  "ticketNameHint": "Ataýy (mys. VIP, Kirý)",
+  "deleteCategoryTooltip": "Sanatty óshirý",
+  "priceHint": "Baǵa",
+  "seatsAmountHint": "Oryn (dana)",
+  "addPriceCategoryButton": "Baǵa sanatyn qosý",
+  "standardTicketName": "Standart",
+
+  "descriptionTitle": "Sıpattama",
+  "eventDescriptionHint": "Is-shara týraly aıtyp berińiz...",
+
+  "myEventsTitle": "Meniń is-sharalarym",
+  "noEventsFound": "Suraý boıynsha is-sharalar tabylmady",
+  "noCreatedEvents": "Sizde ázirge qurylǵan is-sharalar joq",
+
+  "deleteConfirmationTitle": "Óshirýdi rastaý",
+  "deleteEventConfirmation": "\"{itemName}\" is-sharasyn shynynda da óshirgińiz kele me?",
+  "@deleteEventConfirmation": {
+    "placeholders": {
+      "itemName": {"type": "String"}
+    }
+  },
+  "deleteButton": "Óshirý",
+  "cancelButton": "Boldyrmaý",
+
+  "changePoster": "Posterdi ózgertý",
+  "addPoster": "Poster qosý",
+   "language": "Til",
+  "chooseLanguage": "Tildi tañdañyz",
+  "failedToGetCards": "Kartalardy alý múmkin bolmady",
+  "failedToCreatePaymentMethod": "Kartany qosý múmkin bolmady",
+   "myCards": "Meniń kartalarym",
+  "newCard": "Jańa karta",
+  "cardAddedSuccess": "Karta sátti qosylǵan",
+  "invalidDateFormat": "Dúk kúni formaty jasalmaǵan",
+  "errorAddingCard": "Kartany qosý qatesi",
+  "cardNumberLabel": "Karta nomeri",
+  "cardNumberHint": "0000 0000 0000 0000",
+  "expiryDateLabel": "Jaramdylyq Merzimi (MM/YY)",
+  "cvvLabel": "CVV",
+  "linkCard": "Silteme Kartasy",
+  "enterCardNumber": "Karta Nómirin Engizińiz",
+  "cardNumberTooShort": "Karta nómiri tym qysqa",
+  "invalidCardNumber": "Kartanyń nómiri jaramsyz",
+  "fieldRequired": "Óris qajet",
+  "invalidFormat": "Jaramsyz format",
+  "invalidCvv": "Jaramsyz CVV",
+  "cardsTitle": "Kartalar",
+  "noSavedCards": "Saqtalǵan kartalar joq",
+  "oneTimeCard": "Jańa karta (bir rettik)",
+  "addCard": "Kartany qosý",
+  "saveCardForLater": "Kartańyzdy bolashaqta paıdalaný úshin saqtańyz",
+  "confirm_city_title": "Sizdin qalańyz {cityName} ma?",
+  "confirm_city_content": "Osy qaladaǵy is-sharalardy kórsetý kerek pe?",
+  "select_city_title": "Qalany tańdańyz",
+  "yes": "Iá",
+  "no": "Joq",
+  "loading": "Júktelýde...",
+  "go_to_event": "Ótý",
+  "enterPromoCodeTitle": "Promokodty engizińiz",
+  "promoCodeHint": "Promokod",
+  "applyButton": "Qoldaný",
+  "enterPromoCodeButton": "Promokodty engizý",
+  "appliedPromoCodeLabel": "Jarnamalyq kod: {code}",
+  "promoCodeSuccess": "Promokod qabyldandy!",
+  "discountLabel": "Jeńildik ({percent}%)"
+}

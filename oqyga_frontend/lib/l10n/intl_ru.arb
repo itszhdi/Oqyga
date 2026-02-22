@@ -1,0 +1,326 @@
+{
+  "@@locale": "ru",
+  "usernameLabel": "Имя пользователя",
+  "passwordLabel": "Пароль",
+  "forgotPassword": "Забыли пароль?",
+  "signInButton": "Войти",
+  "noAccountLink": "Нет аккаунта?",
+  "emptyError": "Введите {field}",
+  "passwordError": "Пароль должен быть не менее 8 символов",
+  "phoneEmpty": "Введите номер телефона",
+  "phoneFormat": "Формат: +77001234567",
+  "passwordEmpty": "Введите пароль",
+  "passwordLength": "Пароль должен быть не менее 8 символов",
+  
+  "phoneLabel": "Номер телефона",
+  "phoneHint": "+77001234567",
+  "confirmPasswordLabel": "Подтвердите пароль",
+  "passwordsDoNotMatchError": "Пароли не совпадают",
+  "signUpButton": "Регистрация",
+  "alreadyHaveAccountLink": "Уже есть аккаунт?",
+  "usernameEmpty": "Введите имя пользователя",
+  "confirmPasswordEmpty": "Подтвердите пароль",
+  "signUpError": "Ошибка регистрации: {errorMessage}",
+  "@signUpError": {
+    "description": "Сообщение об ошибке при регистрации",
+    "placeholders": {
+      "errorMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "signUpSuccess": "Регистрация успешна!",
+  "signInError": "Ошибка входа: {errorMessage}",
+  "@signInError": {
+    "description": "Сообщение об ошибке при входе",
+    "placeholders": {
+      "errorMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "signInSuccess": "Вход выполнен успешно!",
+   "unexpectedError": "Произошла непредвиденная ошибка",
+  "invalidCredentialsError": "Неверный логин или пароль",
+  "signInFailedError": "Ошибка входа!",
+  "signUpFailedError": "Ошибка регистрации",
+  "tokenRefreshFailedError": "Не удалось обновить токен",
+  "failedToGetEvents": "Не удалось получить мероприятия",
+  "networkError": "Ошибка сети",
+  "failedToGetEvent": "Не удалось получить мероприятие",
+  "failedToLoadMyEvents": "Ошибка загрузки ваших мероприятий",
+
+  "untitledEvent": "Без названия",
+  "noDescription": "Описания нет",
+  "addressNotSpecified": "Адрес не указан",
+  "cityNotSpecified": "Город не указан",
+  "ticketTypeStandard": "Стандарт",
+
+  "invalidEventId": "Неверный ID мероприятия",
+
+  "errorPrefix": "Ошибка: ",
+  "eventNotFound": "Мероприятие не найдено",
+  "buyTicket": "Купить билет",
+  "eventHasPassed": "Мероприятие прошло",
+  "soldOut": "Билеты проданы",
+
+  "findYourEvent": "Найдите своё событие",
+  "errorLoadingEvents": "Ошибка при загрузке мероприятий!",
+  "noEventsFoundForQuery": "Мероприятий по вашему запросу не найдено",
+  "eventListIsEmpty": "Список мероприятий пуст",
+   "failedToLoadCities": "Не удалось загрузить города",
+  "failedToLoadCategories": "Не удалось загрузить категории",
+  "failedToLoadAgeRestrictions": "Не удалось загрузить возрастные ограничения",
+  "failedToLoadFilterOptions": "Не удалось загрузить опции фильтрации",
+  
+  "priceLabel": "Цена",
+  "priceFromHint": "От",
+  "priceToHint": "До",
+  "cityLabel": "Город",
+  "timeLabel": "Время",
+  "dateRangeHint": "Дата - Дата",
+  "timeRangeHint": "Время - Время",
+  "filterButtonText": "Фильтровать",
+  "retryButton": "Повторить",
+  
+  "eventFiltersTitle": "Фильтры событий",
+  "categoryLabel": "Категория",
+  "ageRestrictionLabel": "Возрастное ограничение",
+  
+  "organizerFiltersTitle": "Фильтры мероприятий",
+  "venueLabel": "Место проведения",
+  
+  "ticketFiltersTitle": "Фильтры билетов",
+  "statusLabel": "Статус",
+  "statusActive": "Активен",
+  "statusInactive": "Неактивен",
+  "failedToSendOtp": "Не удалось отправить код",
+  "invalidOtp": "Неверный код",
+  "failedToResetPassword": "Не удалось сбросить пароль",
+  
+  "passwordResetSuccess": "Пароль успешно изменен!",
+  "resetPasswordTitle": "Сброс пароля",
+  "enterPhoneToResetDescription": "Введите ваш номер телефона, чтобы получить код подтверждения.",
+  "sendCodeButton": "Отправить код",
+  "fieldCannotBeEmpty": "Поле не может быть пустым",
+  
+  "otpSentDescription": "Мы отправили код на номер {phoneNumber}.\nВведите его ниже.",
+  "@otpSentDescription": {
+    "placeholders": {
+      "phoneNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "otpLabel": "Код подтверждения",
+  "enterOtpError": "Введите код",
+  "confirmButton": "Подтвердить",
+  
+  "newPasswordTitle": "Новый пароль",
+  "enterNewPasswordDescription": "Введите ваш новый пароль",
+  "newPasswordLabel": "Новый пароль",
+  "saveButton": "Сохранить",
+   "errorLoadingTickets": "Ошибка загрузки билетов",
+  "errorLoadingTicketDetails": "Не удалось загрузить детали билета",
+  "errorLoadingQrCode": "Не удалось загрузить QR-код",
+  "errorPurchasingTicket": "Ошибка покупки билета",
+  
+  "noTicketPriceInfo": "Нет информации о ценах на билеты",
+  "userNotAuthorized": "Пользователь не авторизован",
+  "seatsNotSelected": "Не выбраны места",
+  
+  "posterNotFound": "Постер\nне найден",
+  "stageLabel": "СЦЕНА",
+  "seatSelected": "Выбрано",
+  "seatBooked": "Забронировано",
+  "seatTooltip": "Ряд: {row}, Место: {number}, Цена: {price} тг",
+  "@seatTooltip": {
+    "placeholders": {
+      "row": {"type": "int"},
+      "number": {"type": "int"},
+      "price": {"type": "double"}
+    }
+  },
+  
+  "seatInHall": "Место в зале",
+  "ticketCount": "Кол-во билетов",
+  "showTicketToStaff": "Покажите билет\nнашему сотруднику!",
+  "myTicketTitle": "Мой билет",
+  
+  "myTicketsTitle": "Мои билеты",
+  "noTicketsFound": "Билеты по вашему запросу не найдены",
+  "noTicketsYet": "У вас пока нет купленных билетов",
+  "ticketStatusActive": "Активен",
+  
+  "processingPayment": "Обработка...",
+  "payButton": "Оплатить {amount} ₸",
+  "@payButton": {
+    "placeholders": {
+      "amount": {"type": "String"}
+    }
+  },
+  "choosePaymentMethod": "Пожалуйста, выберите способ оплаты",
+  "serviceFeeLabel": "Работа сервиса (10%)",
+  "totalPriceLabel": "Итоговая стоимость",
+  "seatsNotSelectedLabel": "Места не выбраны",
+  "seatRowAndNumber": "Ряд {row}, Место {number}",
+  "@seatRowAndNumber": {
+    "placeholders": {
+      "row": {"type": "int"},
+      "number": {"type": "int"}
+    }
+  },
+  
+  "ticketBookingTitle": "Оформление билета",
+  "selectedSeatsDescription": "{count} билет(ов): {row} ряд, {number} место...",
+  "@selectedSeatsDescription": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "row": {"type": "int"},
+      "number": {"type": "int"}
+    }
+  },
+  "totalPriceWithCount": "{count} билет(ов): {amount} тг",
+  "@totalPriceWithCount": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "amount": {"type": "String"}
+    }
+  },
+  "checkoutButton": "Оформить",
+  "search": "Поиск",
+  "selectAtLeastOneSeat": "Пожалуйста, выберите хотя бы одно место",
+  "noDataForTicket": "Нет данных для отображения билета.",
+   "errorLoadingProfile": "Ошибка загрузки профиля",
+  "errorUpdatingProfile": "Ошибка обновления профиля",
+  "errorChangingPassword": "Не удалось сменить пароль",
+  "errorUploadingPhoto": "Не удалось загрузить фото",
+  "errorUploadingPhotoWithReason": "Ошибка загрузки фото: {reason}",
+  "@errorUploadingPhotoWithReason": {
+    "placeholders": {
+      "reason": {"type": "String"}
+    }
+  },
+  
+  "uploadingPhoto": "Загрузка фото...",
+  "savingChanges": "Сохранение изменений...",
+  "changingPassword": "Смена пароля...",
+  "photoUpdatedSuccess": "Фото успешно обновлено",
+  "profileUpdatedSuccess": "Профиль успешно обновлен",
+  "passwordChangedSuccess": "Пароль успешно изменен",
+  
+  "profileTitle": "Профиль",
+  "yourDataTitle": "Ваши данные",
+  "editProfileTitle": "Изменить",
+  "changePasswordTitle": "Сменить пароль",
+    "logoutButton": "Выйти",
+  
+  "logoutDialogTitle": "Вы действительно хотите выйти?",
+  "noButton": "Нет",
+  "yesLogoutButton": "Выйти",
+  
+  "changePhotoLabel": "Изменить фото",
+   "notSpecified": "Не указан",
+  "paymentMethodsTitle": "Способы оплаты",
+  "yourCards": "Ваши карты",
+  "appLanguageTitle": "Язык приложения",
+  "emailLabel": "Почта",
+  "currentPasswordLabel": "Текущий пароль",
+  "errorCreatingEvent": "Ошибка при создании мероприятия",
+  "errorUpdatingEvent": "Ошибка при обновлении мероприятия",
+  "errorDeletingEvent": "Не удалось удалить мероприятие",
+  "errorLoadingVenues": "Не удалось загрузить список мест",
+  
+  "addEventTitle": "Добавить мероприятие",
+  "editEventTitle": "Изменить мероприятие",
+  "eventCreatedSuccess": "Мероприятие успешно создано!",
+  "eventUpdatedSuccess": "Мероприятие успешно обновлено!",
+  
+  "organizerTitle": "Организатор",
+  "yourOrganizationTitle": "Ваша организация",
+  "organizationNameLabel": "Название организации",
+  
+  "maxTicketCategoriesError": "Максимум 5 ценовых категорий",
+  "addPosterAndTitleError": "Добавьте афишу и заполните название",
+  "fillAllTicketDataError": "Заполните данные для всех категорий билетов",
+  
+  "basicInfoTitle": "Основная информация",
+  "eventNameHint": "Название мероприятия",
+  "dateHint": "Дата",
+  "timeHint": "Время",
+  "chooseCityHint": "Выберите город",
+  "categoryHint": "Категория",
+  "venueAddressHint": "Адрес проведения",
+  
+  "pricesAndTicketsTitle": "Цены и билеты",
+  "ticketNameHint": "Название (напр. VIP, Входной)",
+  "deleteCategoryTooltip": "Удалить категорию",
+  "priceHint": "Цена",
+  "seatsAmountHint": "Мест (шт)",
+  "addPriceCategoryButton": "Добавить категорию цен",
+  "standardTicketName": "Стандарт",
+  
+  "descriptionTitle": "Описание",
+  "eventDescriptionHint": "Расскажите о мероприятии...",
+  
+  "myEventsTitle": "Мои мероприятия",
+  "noEventsFound": "Мероприятия по запросу не найдены",
+  "noCreatedEvents": "У вас пока нет созданных мероприятий",
+  
+  "deleteConfirmationTitle": "Подтверждение удаления",
+  "deleteEventConfirmation": "Вы действительно хотите удалить мероприятие \"{itemName}\"?",
+  "@deleteEventConfirmation": {
+    "placeholders": {
+      "itemName": {"type": "String"}
+    }
+  },
+  "deleteButton": "Удалить",
+  "cancelButton": "Отмена",
+  
+  "changePoster": "Изменить афишу",
+  "addPoster": "Добавить афишу",
+  "language": "Язык",
+  "chooseLanguage": "Выберите язык",
+  "failedToGetCards": "Не удалось получить карты",
+  "failedToCreatePaymentMethod": "Не удалось добавить карту",
+  "myCards": "Мои карты",
+  "newCard": "Новая карта",
+  "cardAddedSuccess": "Карта успешно добавлена",
+  "invalidDateFormat": "Неверный формат даты",
+  "errorAddingCard": "Ошибка при добавлении карты",
+  "cardNumberLabel": "Номер карты",
+  "cardNumberHint": "0000 0000 0000 0000",
+  "expiryDateLabel": "Срок действия (MM/YY)",
+  "cvvLabel": "CVV",
+  "linkCard": "Привязать карту",
+  "enterCardNumber": "Введите номер карты",
+  "cardNumberTooShort": "Номер карты слишком короткий",
+  "invalidCardNumber": "Неверный номер карты",
+  "fieldRequired": "Поле обязательно для заполнения",
+  "invalidFormat": "Неверный формат",
+  "invalidCvv": "Неверный CVV",
+  "cardsTitle": "Карты",
+  "noSavedCards": "Нет сохраненных карт",
+  "oneTimeCard": "Новая карта (разовая)",
+  "addCard": "Добавить карту",
+  "saveCardForLater": "Сохранить карту для будущих оплат",
+  "confirm_city_title": "Ваш город {cityName}?",
+  "@confirm_city_title": {
+    "placeholders": {
+      "cityName": { "type": "String" }
+    }
+  },
+  "confirm_city_content": "Показать мероприятия в этом городе?",
+  "select_city_title": "Выберите город",
+  "yes": "Да",
+  "no": "Нет",
+  "loading": "Загрузка...",
+  "go_to_event": "Перейти",
+   "enterPromoCodeTitle": "Введите промокод",
+  "promoCodeHint": "Промокод",
+  "applyButton": "Применить",
+  "enterPromoCodeButton": "Ввести промокод",
+  "appliedPromoCodeLabel": "Промокод: {code}",
+  "promoCodeSuccess": "Промокод применен!",
+  "discountLabel": "Скидка ({percent}%)"
+}
